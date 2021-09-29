@@ -1,0 +1,114 @@
+.fixed-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    z-index: 11;
+}
+
+.header {
+    position: relative;
+    box-sizing: border-box;
+    max-width: 1920px;
+    height: 90px;
+    margin: auto;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    background-color: $white;
+    @include respond-to('laptop') {
+        padding: 10px 30px;
+    }
+    @include respond-to('tablet') {
+        align-items: center;
+    }
+    @include respond-to('xs') {
+        padding: 5px 25px;
+        height: 40px;
+    }
+    
+    &.switch-logo{
+        align-items: center;
+        height: 60px;
+        padding: 15px 30px;
+        
+        .header__logo-top{
+            img{
+                @include animate(all);
+                opacity: 0;
+            }
+        }
+        .header__logo-scroll{
+            img{
+                @include animate(all);
+                opacity: 1;
+            }
+        }
+    }
+    
+    &__logo-top,
+    &__logo-scroll{
+        position: absolute;
+        top: 50%;
+        left: 30px;
+        transform: translateY(-50%);
+    
+        @include respond-to('laptop') {
+            img{
+                max-height: 35px;
+            }
+        }
+        @include respond-to('xs') {
+            left: 22px;
+            img{
+                max-height: 23px;
+            }
+        }
+    }
+    &__logo-top{
+        img{
+            @include animate(all);
+            opacity: 1;
+        }
+    }
+    &__logo-scroll{
+        
+        img{
+            @include animate(all);
+            opacity: 0;
+        }
+    }
+    .navbar{
+        
+        .menu-wrapper{
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        li{
+            margin-left: 20px;
+        }
+        
+        a{
+            @include animate(all);
+            font-weight: 600;
+            color: $text;
+            font-size: 16px;
+            letter-spacing: 1.33px;
+            text-transform: uppercase;
+    
+            &:hover{
+                @include animate(all);
+                color: $hover;
+            }
+    
+            @include respond-to('tablet') {
+                font-size: 13px;
+                letter-spacing: 1.08px;
+            }
+        }
+    }
+}

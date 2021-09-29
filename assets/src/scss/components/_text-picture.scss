@@ -1,0 +1,84 @@
+.text-picture{
+    max-width: 1920px;
+    margin: auto;
+    .text-section--container{
+        margin: auto 0;
+        padding-left: 218px;
+        @include respond-to('desktop') {
+            padding-left: 120px;
+            width: 44%;
+        }
+        @media screen and (max-width: 1360px) {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 163px 121px 215px;
+        }
+        @media screen and (max-width: 1240px) {
+            padding: 94px 88px 147px;
+        }
+        @include respond-to('phone') {
+            padding: 96px 75px 132px;
+        }
+        @media screen and (max-width: 767px) {
+            flex-direction: column;
+            padding: 76px 22px;
+        }
+        //@include respond-to('tablet') {
+        //    padding: 97px 72px 130px;
+        //}
+        //@include respond-to('xs') {
+        //    padding: 70px 20px;
+        //    display: block;
+        //}
+    }
+    .text-section--box{
+        max-width: 446px;
+        width: 100%;
+        @media screen and (max-width: 1360px) {
+            width: 47%;
+        }
+        @include respond-to('tablet') {
+            width: 50%;
+        }
+        @media screen and (max-width: 767px) {
+            max-width: inherit;
+            width: 100%;
+        }
+        p{
+            font-size: 19px;
+            font-style: normal;
+            letter-spacing: 0.5px;
+            line-height: 27px;
+            text-align: left;
+            margin-top: 35px;
+            
+            @media screen and (max-width: 1360px) {
+                font-size: 14px;
+                letter-spacing: 0.37px;
+                line-height: 23px;
+            }
+            
+            &:first-child{
+                margin-top: 45px;
+                @media screen and (max-width: 767px) {
+                    margin-top: 0;
+                }
+            }
+            &:nth-child(2n){
+                margin-top: 0;
+            }
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .picture-section--box{
+        display: flex;
+        align-items: center;
+        @media screen and (max-width: 1360px){
+            display: none;
+        }
+    }
+}

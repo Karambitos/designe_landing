@@ -1,0 +1,75 @@
+.text-section{
+    padding: 235px 218px;
+    max-width: 1920px;
+    margin: auto;
+    @include respond-to('desktop') {
+        padding: 163px 121px 215px;
+    }
+    @media screen and (max-width: 1240px) {
+        padding: 92px 88px 126px;
+    }
+    @include respond-to('phone') {
+        padding: 96px 75px 126px;
+    }
+    @media screen and (max-width: 767px) {
+        .row{
+            display: flex;
+            flex-direction: column;
+        }
+        padding: 76px 22px;
+    }
+
+    &--title{
+        display: block;
+        font-size: 12px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+    
+    &--box{
+        width: 46%;
+        @media screen and (max-width: 767px) {
+            width: 100%;
+        }
+
+        p{
+            font-size: 30px;
+            line-height: 38px;
+    
+            @media screen and (max-width: 1240px) {
+                font-size: 18px;
+                line-height: 24.3px;
+            }
+
+            @include respond-to('xs') {
+                font-size: 20px;
+                letter-spacing: -0.07px;
+                line-height: 27px;
+            }
+        }
+        p:last-child{
+            margin-bottom: 0;
+        }
+    }
+    &--box:nth-child(2n){
+        width: 44%;
+        @include respond-to('desktop') {
+            width: 54%;
+        }
+        @include respond-to('laptop') {
+            width: 47%;
+        }
+        @media screen and (max-width: 767px) {
+            width: 100%;
+        }
+        p:first-child{
+            margin-top: 58px;
+            @include respond-to('laptop') {
+                margin-top: 50px;
+            }
+            @media screen and (max-width: 767px) {
+                margin-top: 0;
+            }
+        }
+    }
+}

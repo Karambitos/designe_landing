@@ -1,0 +1,25 @@
+.picture{
+    &-box{
+        display: flex;
+        max-height: 720px;
+        overflow: hidden;
+    
+        @include respond-to('desktop') {
+            max-height: 535px;
+        }
+        @media screen and (max-width: 1240px) {
+            max-height: 478px;
+        }
+        @include respond-to('phone') {
+            max-height: 348px;
+        }
+        @include respond-to('xs') {
+            max-height: 175px;
+        }
+    }
+    img{
+        width: 100%;
+        object-position: bottom;
+        object-fit: cover;
+    }
+}

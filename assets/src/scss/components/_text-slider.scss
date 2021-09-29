@@ -1,0 +1,119 @@
+.text-slider{
+    background-color: $primaryBG;
+    
+    .swiper-text--box{
+        margin: auto;
+        max-width: 1100px;
+        padding: 150px 0;
+        @include respond-to('desktop') {
+            max-width: 1040px;
+            padding: 129px 0;
+        }
+        @include respond-to('laptop') {
+            padding: 42px 145px 70px;
+        }
+        @include respond-to('tablet') {
+            padding: 40px 120px 45px;
+        }
+        @include respond-to('xs') {
+            padding: 15px 50px;
+        }
+    }
+    .swiper-text{
+        @include respond-to('tablet') {
+            padding-bottom: 55px;
+        }
+        @include respond-to('xs') {
+            padding-bottom: 33px;
+        }
+    }
+
+    .swiper-wrapper{
+        @include respond-from('tablet') {
+            display: flex;
+            justify-content: space-between;
+            transform: translate3d(0px,0,0) !important;
+        }
+    }
+    .swiper-slide{
+    
+        @include respond-from('laptop') {
+            max-width: 444px !important;
+        }
+        @include respond-to('laptop') {
+            max-width: 340px !important;
+        }
+        @include respond-to('tablet') {
+            max-width: unset !important;
+        }
+    
+        h3{
+            font-size: 30px;
+            font-style: normal;
+            letter-spacing: -0.1px;
+            line-height: 38px;
+            color: $white;
+            font-weight: 400;
+            @include respond-to('laptop') {
+                font-size: 25px;
+                letter-spacing: 0.18px;
+                line-height: 33.2px;
+            }
+            @include respond-to('phone_l') {
+                font-size: 28px;
+                letter-spacing: 0.2px;
+                line-height: 28px;
+            }
+        }
+        
+        li{
+            font-size: 19px;
+            font-style: normal;
+            letter-spacing: 0.5px;
+            line-height: 27px;
+            text-align: left;
+            color: $light;
+            padding: 15px 0;
+            border-bottom: 1px solid $light;
+            
+            @include respond-to('desktop') {
+                padding: 10px 0;
+            }
+            @include respond-to('laptop') {
+                padding: 7px 0;
+                font-size: 14px;
+                letter-spacing: 0.37px;
+                line-height: 23px;
+            }
+    
+            @media screen and (max-width: 768px) {
+                br{
+                    display: none;
+                }
+            }
+            @media screen and (max-width: 560px) {
+                br{
+                    display: block;
+                }
+            }
+        }
+    }
+    
+    .swiper-pagination{
+        @include respond-from('tablet') {
+            display: none;
+        }
+    
+        .swiper-pagination-bullet{
+            width: 7px;
+            height: 7px;
+            background-color: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            
+            &--active{
+                border: 1px solid $white;
+            }
+        }
+    }
+}
+

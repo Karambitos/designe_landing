@@ -1,0 +1,309 @@
+.slider{
+    padding: 100px 0;
+    @include respond-to('laptop') {
+        padding: 100px 0 0;
+    }
+    @include respond-to('xs') {
+        padding: 55px 0 0;
+    }
+    
+    .wrapper{
+        @include respond-to('tablet') {
+            padding: 0;
+        }
+    }
+    
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .swiper-slide {
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 1255px;
+        margin: 50px 0;
+
+        @include respond-to('desktop') {
+            width: 874px;
+            height: 633px;
+            margin: 42px 0 80px 0;
+        }
+    
+        @include respond-to('laptop') {
+            width: 729px;
+            height: 519px;
+        }
+        @include respond-to('tablet') {
+            width: 100%;
+            height: auto;
+            margin-top: 0;
+        }
+        
+        img{
+            object-fit: cover;
+            object-position: center;
+            width: 1113px;
+            height: 776px;
+    
+            @include respond-to('desktop') {
+                height: 600px;
+            }
+    
+            @include respond-to('laptop') {
+                width: 729px;
+                height: 485px;
+            }
+            @include respond-to('tablet') {
+                width: 100%;
+                height: auto;
+            }
+        }
+        
+        .slide-number--box{
+            position: absolute;
+            @include respond-to('tablet') {
+                position: static;
+                width: 100%;
+                text-align: right;
+                padding-right: 150px;
+                padding-bottom: 35px;
+            }
+            @include respond-to('xs') {
+                padding-right: 100px;
+                padding-bottom: 27px;
+            }
+            .slide-number{
+                font-size: 30px;
+                font-style: normal;
+                letter-spacing: normal;
+                line-height: 38px;
+                text-align: right;
+                @include respond-to('laptop') {
+                    font-size: 20px;
+                    letter-spacing: -0.07px;
+                    line-height: 27px;
+                }
+            }
+        }
+    
+        .img-box {
+            overflow: hidden;
+        }
+        
+        .slide-title--box{
+            display: flex;
+            padding: 10px 0 0;
+            width: 88%;
+            margin: auto;
+    
+            @include respond-to('desktop') {
+                width: 100%;
+                .slide-title{
+                    margin: 0;
+                }
+            }
+            @include respond-to('tablet') {
+                padding: 22px 0 0;
+            }
+            @include respond-to('xs') {
+                padding: 10px 0;
+            }
+            .slide-title{
+                width: 88%;
+                padding-right: 100px;
+                @include animate(all);
+                font-size: 19px;
+                font-style: normal;
+                letter-spacing: 0.5px;
+                line-height: 27px;
+                text-align: left;
+                opacity: 1;
+    
+                @media screen and (max-width: 1240px) {
+                    font-size: 14px;
+                    letter-spacing: 0.37px;
+                    line-height: 23px;
+                    padding: 0;
+                }
+                @include respond-to('tablet') {
+                    padding: 0 75px;
+                }
+                @include respond-to('xs') {
+                    padding-left: 20px;
+                    max-width: 50%;
+                }
+            }
+        }
+        
+    
+        &.swiper-slide-prev{
+            @include animate(all);
+            opacity: 0;
+            margin-right: 0 !important;
+            @include respond-to('tablet') {
+                opacity: 1;
+            }
+        }
+        &.swiper-slide-active{
+            .slide-number--box{
+                top: -48px;
+                right: 70px;
+    
+                @include respond-to('desktop') {
+                    right: 0px;
+                }
+            }
+        }
+        &.swiper-slide-next{
+            .slide-number--box{
+                top: -48px;
+                left: 270px;
+                @include respond-to('desktop') {
+                    left: 137px;
+                }
+                @media screen and (max-width: 1439px) {
+                    left: 220px;
+                }
+                @media screen and (max-width: 1366px) {
+                    left: 260px;
+                }
+                @media screen and (max-width: 1260px) {
+                    left: 185px;
+                }
+                @media screen and (max-width: 1240px) {
+                    left: 85px;
+                }
+                @media screen and (max-width: 1024px) {
+                    left: 95px;
+                }
+            }
+            .slide-title{
+                @include animate(all);
+                opacity: 0;
+            }
+            .img-box{
+                &:hover{
+                    img{
+                        transition: all 1s;
+                        transform: translateX(-40px);
+                    }
+                }
+            }
+        }
+    }
+    
+    .swiper-pagination {
+        display: none;
+        
+        @include respond-to('medium') {
+            display: flex;
+            bottom: 85px;
+            justify-content: flex-end;
+            width: 76%;
+        }
+        @media screen and (max-width: 1240px) {
+            width: 80%;
+        }
+        @include respond-to('tablet') {
+            width: 100%;
+            bottom: 90px;
+            right: 75px;
+            left: unset;
+        }
+        @include respond-to('xs') {
+            right: 15px;
+        }
+    
+        .swiper-pagination-bullet{
+            width: 6px;
+            height: 7px;
+            border: 1px solid $text;
+            background-color: transparent;
+    
+            &.active,
+            &.hover,
+            &.focus{
+               outline: 1px solid $text;
+            }
+        }
+    }
+
+    .swiper-wrapper{
+        position: relative;
+    }
+    
+    .arrows{
+        position: absolute;
+        bottom: 70px;
+        right: 20%;
+        display: flex;
+        width: 90px;
+        justify-content: space-between;
+    
+        @include respond-to('desktop') {
+            right: 24.5%;
+        }
+    
+        @media screen and (max-width: 1439px) {
+            right: 30%;
+        }
+        @media screen and (max-width: 1366px) {
+            right: 27%;
+        }
+        @media screen and (max-width: 1240px) {
+            right: 24%;
+        }
+        @include respond-to('medium') {
+            display: none;
+        }
+        
+        
+        .swiper-button-next,
+        .swiper-button-prev{
+            
+            .icon{
+                font-size: 19px;
+            }
+            @include animate(all);
+            position: static;
+        }
+        
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            content: none;
+        }
+        
+        .swiper-button-next:focus,
+        .swiper-button-prev:focus{
+            outline: none;
+        }
+        
+        .swiper-button-next:hover,
+        .swiper-button-prev:hover{
+            @include animate(all);
+            opacity: 0.35;
+        }
+        
+        .swiper-button-next.swiper-button-disabled,
+        .swiper-button-prev.swiper-button-disabled{
+            opacity: 1;
+        }
+        
+    }
+    
+}

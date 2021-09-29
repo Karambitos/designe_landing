@@ -1,0 +1,79 @@
+/*
+ * The Typekit service used to deliver this font or fonts for use on websites
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * neue-haas-grotesk-display:
+ *   - http://typekit.com/eulas/00000000000000003b9b2046
+ *   - http://typekit.com/eulas/00000000000000003b9b2048
+ *   - http://typekit.com/eulas/00000000000000003b9b204a
+ *
+ * © 2009-2020 Adobe Systems Incorporated. All Rights Reserved.
+ */
+/*{"last_published":"2020-10-19 17:47:33 UTC"}*/
+
+@import url("https://p.typekit.net/p.css?s=1&k=byp8qzn&ht=tk&f=39494.39496.39498&a=661105&app=typekit&e=css");
+
+@font-face {
+    font-family: "neue-haas-grotesk-display";
+    src: url("https://use.typekit.net/af/9395af/00000000000000003b9b2046/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"), url("https://use.typekit.net/af/9395af/00000000000000003b9b2046/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"), url("https://use.typekit.net/af/9395af/00000000000000003b9b2046/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "neue-haas-grotesk-display";
+    src: url("https://use.typekit.net/af/28f000/00000000000000003b9b2048/27/l?subset_id=2&fvd=n5&v=3") format("woff2"), url("https://use.typekit.net/af/28f000/00000000000000003b9b2048/27/d?subset_id=2&fvd=n5&v=3") format("woff"), url("https://use.typekit.net/af/28f000/00000000000000003b9b2048/27/a?subset_id=2&fvd=n5&v=3") format("opentype");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "neue-haas-grotesk-display";
+    src: url("https://use.typekit.net/af/8a200c/00000000000000003b9b204a/27/l?subset_id=2&fvd=n6&v=3") format("woff2"), url("https://use.typekit.net/af/8a200c/00000000000000003b9b204a/27/d?subset_id=2&fvd=n6&v=3") format("woff"), url("https://use.typekit.net/af/8a200c/00000000000000003b9b204a/27/a?subset_id=2&fvd=n6&v=3") format("opentype");
+    font-display: auto;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.tk-neue-haas-grotesk-display {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon/icomoon.eot?aa384j');
+    src: url('../fonts/icomoon/icomoon.eot?aa384j#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon/icomoon.ttf?aa384j') format('truetype'),
+    url('../fonts/icomoon/icomoon.woff?aa384j') format('woff'),
+    url('../fonts/icomoon/icomoon.svg?aa384j#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-left-arrow:before {
+    content: "\e900";
+}
+
+.icon-right-arrow:before {
+    content: "\e901";
+}

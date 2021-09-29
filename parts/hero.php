@@ -2,6 +2,7 @@
 <section class="hero-section">
     <div class="hero">
         <h2>HELLO WORLD</h2>
+        <h3>Git test</h3>
         <div class="row first-row">
             <div class="hero--logo hero--item">
                 <?php if ($h_logo = $hero_block['hero_logo']):?>

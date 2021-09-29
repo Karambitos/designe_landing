@@ -1,198 +1,196 @@
-.hero-section{
+.hero-section {
     margin-top: 140px;
     background: linear-gradient(to bottom, transparent 70%, $primary 30%);
-    @include respond-to('desktop') {
-        background: linear-gradient(to bottom, transparent 66%, #3d6582 34%)
+    @include respond-to("desktop") {
+        background: linear-gradient(to bottom, transparent 66%, #3d6582 34%);
     }
-    @include respond-to('laptop') {
+    @include respond-to("laptop") {
         margin-top: 120px;
     }
-    @include respond-to('tablet') {
+    @include respond-to("tablet") {
         background: linear-gradient(to bottom, transparent 82%, #3d6582 18%);
     }
-    @include respond-to('xs') {
+    @include respond-to("xs") {
         margin-top: 70px;
         background: linear-gradient(to bottom, transparent 86%, #3d6582 14%);
     }
+    background: red;
 }
-.hero{
+.hero {
     max-width: 1920px;
     margin: auto;
     padding-left: 30px;
 
-    .hero--logo{
+    .hero--logo {
         padding-left: 186px;
-    
-        @include respond-to('desktop') {
+
+        @include respond-to("desktop") {
             padding-left: 92px;
         }
-    
-        @include respond-to('laptop') {
+
+        @include respond-to("laptop") {
             padding-left: 50px;
             max-width: 245px;
         }
-        @include respond-to('tablet') {
+        @include respond-to("tablet") {
             display: none;
         }
     }
-    .hero--title{
+    .hero--title {
         max-width: 245px;
         margin: 0 155px 0 auto;
-    
-        @include respond-to('desktop') {
+
+        @include respond-to("desktop") {
             margin: 0 0 0 auto;
         }
-        @include respond-to('laptop') {
+        @include respond-to("laptop") {
             max-width: 186px;
         }
-        @include respond-to('tablet') {
+        @include respond-to("tablet") {
             max-width: 100%;
-            
-            h2{
-                font-family: "neue-haas-grotesk-display",sans-serif;
+
+            h2 {
+                font-family: "neue-haas-grotesk-display", sans-serif;
                 font-size: 60px;
                 letter-spacing: 0.86px;
                 line-height: 60px;
-    
-                @include respond-to('xs') {
+
+                @include respond-to("xs") {
                     font-size: 37px;
                     letter-spacing: 0.5px;
                     line-height: 37px;
                 }
             }
-           
-            h2:first-child{
+
+            h2:first-child {
                 margin-bottom: 5px;
             }
-            h2:last-child{
+            h2:last-child {
                 margin-bottom: 40px;
             }
-            
         }
     }
-    .hero--link{
+    .hero--link {
         align-items: center;
         display: flex;
         padding-right: 30px;
         padding-bottom: 35px;
-    
-        @include respond-to('desktop') {
+
+        @include respond-to("desktop") {
             padding-right: 24px;
             padding-bottom: 120px;
         }
-        @include respond-to('laptop') {
+        @include respond-to("laptop") {
             padding-right: 16px;
             padding-bottom: 155px;
         }
-        @include respond-to('tablet') {
+        @include respond-to("tablet") {
             padding: 96px 0 41px 0;
             text-align: right;
             max-width: 75%;
             width: 100%;
-            a{
+            a {
                 margin-left: auto;
             }
         }
-        @include respond-to('xs') {
+        @include respond-to("xs") {
             padding: 65px 0 25px 0;
             text-align: right;
             max-width: 85%;
             width: 100%;
-    
-            a{
+
+            a {
                 padding-right: 35px;
             }
-            .icon-right{
+            .icon-right {
                 right: 0;
             }
         }
     }
-    .hero--img{
-        img{
+    .hero--img {
+        img {
             width: 100%;
         }
     }
-    .first-row{
-        @include respond-to('tablet') {
+    .first-row {
+        @include respond-to("tablet") {
             display: block;
         }
-        .hero--img{
-           max-width: 30%;
+        .hero--img {
+            max-width: 30%;
             max-height: 327px;
             width: 100%;
             overflow: hidden;
             object-fit: cover;
-           @include respond-to('desktop') {
-               max-height: 305px;
-           }
-            @include respond-to('tablet') {
+            @include respond-to("desktop") {
+                max-height: 305px;
+            }
+            @include respond-to("tablet") {
                 max-width: 50%;
                 margin-left: auto;
             }
             @media screen and (max-width: 768px) {
                 max-width: 56%;
             }
-            @include respond-to('xs') {
+            @include respond-to("xs") {
                 max-width: 70%;
             }
         }
     }
-    .second-row{
-        @include respond-to('tablet') {
+    .second-row {
+        @include respond-to("tablet") {
             flex-wrap: wrap;
         }
-        .hero--img{
+        .hero--img {
             max-width: 70%;
-            max-height: 653px;;
+            max-height: 653px;
             width: 100%;
             overflow: hidden;
             object-fit: cover;
-            @include respond-to('desktop') {
+            @include respond-to("desktop") {
                 max-height: 610px;
             }
-            @include respond-to('tablet') {
+            @include respond-to("tablet") {
                 max-width: 75%;
                 order: 2;
             }
-            @include respond-to('xs') {
+            @include respond-to("xs") {
                 max-width: 85%;
             }
         }
     }
-    
-    &--item{
-        a{
+
+    &--item {
+        a {
             @include animate(all);
             display: inline-block;
             padding-right: 44px;
             padding-left: 10px;
             position: relative;
             overflow: hidden;
-            
+
             font-size: 40px;
             letter-spacing: 0.57px;
             line-height: 50px;
             text-align: right;
             color: $text;
-            @include respond-to('laptop') {
+            @include respond-to("laptop") {
                 font-size: 30px;
                 letter-spacing: 0.43px;
                 line-height: 37.69px;
             }
-            @include respond-to('xs') {
+            @include respond-to("xs") {
                 font-size: 25px;
                 letter-spacing: 0.36px;
                 line-height: 31.41px;
             }
-            
-            
-    
-            .text-link{
+
+            .text-link {
                 @include animate(all);
                 display: inline-block;
             }
-    
-            .icon-left{
+
+            .icon-left {
                 @include animate(all);
                 top: 50%;
                 position: absolute;
@@ -200,7 +198,7 @@
                 left: 0px;
                 transform: translateY(-50%) translateX(-34px);
             }
-            .icon-right{
+            .icon-right {
                 @include animate(all);
                 position: absolute;
                 right: 10px;
@@ -208,28 +206,26 @@
                 transform: translateY(-50%);
                 width: 23px;
             }
-            
-            &:hover{
-                .text-link{
+
+            &:hover {
+                .text-link {
                     @include animate(all);
                     transform: translateX(34px);
                 }
-                .icon-left{
+                .icon-left {
                     @include animate(all);
                     right: unset;
                     left: 0px;
                     transform: translateY(-50%) translateX(0px);
                 }
-                .icon-right{
+                .icon-right {
                     @include animate(all);
                     transform: translateY(-50%) translateX(34px);
                 }
             }
         }
-        h2{
+        h2 {
             margin: 0 0 20px;
         }
     }
-    
-
 }
